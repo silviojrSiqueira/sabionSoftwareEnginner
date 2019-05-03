@@ -12,18 +12,13 @@ Para solucionar, foi criado uma lista de carros com ID's duplicados. Ao clicar n
 
 Clonar o projeto:
 
-    ```
         git clone https://github.com/silviojrSiqueira/sabionSoftwareEnginner.git
-    ```
+    
 
 Instalação das dependências:
 
-    ```
         npm install
-    ```
 
 Rode o projeto que será inicializado no endereço http://localhost:4200/
 
-    ```
         npm start
-    ```
