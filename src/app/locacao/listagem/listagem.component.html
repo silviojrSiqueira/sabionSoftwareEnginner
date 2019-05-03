@@ -15,7 +15,6 @@
             <th>Modelo</th>
             <th>Código Entrega</th>
             <th>Status</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -24,15 +23,12 @@
             <td>{{ data.modelo }}</td>
             <td>{{ data.codEntrega }}</td>
             <td [ngClass]="{'text-success': data.status === 'Devolvido', 'text-danger': data.status === 'Alugado'}">{{ data.status }}</td>
-            <td>
-              <button type="button" class="btn btn-primary btn-sm float-right">Visualizar</button>
-            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="card mt-5">
+  <div class="card mt-4">
     <div class="card-header">
       Carros que não retornaram ao pátio
       <button class="btn btn-danger btn-sm float-right" (click)="rastrearCarros()">Rastrear Carros</button>
@@ -45,21 +41,15 @@
             <th>Modelo</th>
             <th>Código Entrega</th>
             <th>Status</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngIf="!listaCarrosRastreados.lenght">
-            <td colspan="5" class="text-center">Nenhum resultado encontrado</td>
-          </tr>
           <tr *ngFor="let data of listaCarrosRastreados">
             <th>{{ data.id }}</th>
             <td>{{ data.modelo }}</td>
             <td>{{ data.codEntrega }}</td>
             <td [ngClass]="{'text-success': data.status === 'Devolvido', 'text-danger': data.status === 'Alugado'}">{{ data.status }}</td>
-            <td>
-              <button type="button" class="btn btn-primary btn-sm">Visualizar</button>
-            </td>
+            
           </tr>
         </tbody>
       </table>
